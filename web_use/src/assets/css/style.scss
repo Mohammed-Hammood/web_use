@@ -1,0 +1,98 @@
+.NavBar-container {
+    width:100%;
+    height:50px;
+    position:fixed;
+    top:0;
+    z-index:100;
+    padding:0;
+    background-color:black;
+    color:white;
+    float:left;
+    direction: ltr;
+    a {
+        text-decoration:none;
+        color:white;
+        float:left;
+       
+        font-size:15px;
+        padding:15px;
+        transition: transform 1s;
+    }
+    a:hover {
+        transform: rotate(-360deg);
+        border-radius:30px;
+        text-shadow:6px 6px 10px red;
+    }
+}
+.body-container {
+    top:50px;
+    display: block;
+    position:relative;
+    width:100%;
+
+}
+.home-container {
+    padding:20px;
+    .first-row {
+        justify-content: center;
+        display: grid;
+        width:100%;
+        input, select {
+            margin:10px;
+            min-width:300px;
+            border:1px solid silver;
+            border-radius:5px;
+            font-size:15px;
+            min-height:30px;
+        }
+
+    }
+    .second-row {
+        .first-column {
+            width:30%;
+            float:left;
+            display:grid;
+            justify-content: center;
+            justify-items: center;
+            textarea {
+                    min-width:300px;
+                    min-height:150px;
+                    border:1px solid silver;
+                    border-radius:5px;
+                    resize: none;
+                }
+        }
+        .second-column {
+            width:70%;
+            float:left;
+            line-height: 150px;
+            input, select {
+                min-width:30%;
+                min-height:35px;
+                margin:10px;
+                border-radius:5px;
+                border:1px solid silver;
+            }
+            select{
+                height:35px;
+            }
+        }
+        @media screen and (max-width:1065px) {
+            .first-column, .second-column{
+                width:100%;
+            }
+        }
+        @media screen and (max-width:750px) {
+            .second-column{
+                input, select{
+                    width:95%;
+                }
+            }
+        }
+    }
+}
+
+.not-found-container {
+    display: flex;
+    justify-content: center;
+}
